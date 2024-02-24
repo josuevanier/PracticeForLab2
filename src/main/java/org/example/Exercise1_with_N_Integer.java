@@ -33,7 +33,11 @@ public class Exercise1_with_N_Integer {
 
         System.out.println(produtOfArray(integers));
 
-        System.out.println(arrayAvg(integers));
+       System.out.println(arrayAvg(integers));
+
+       int[] array = {1,1,1,2,3,4};
+
+       elementOccurence(array,1);
     }
 
     public static int sumOfArray(int[] array){
@@ -56,5 +60,14 @@ public class Exercise1_with_N_Integer {
         double avg = 0.0;
         avg = (double) sumOfArray(array) / array.length;
         return avg;
+    }
+
+    public static void elementOccurence(int[] array, int target){
+        int count = 0;
+
+        for(int i = 0; i < array.length; i++){
+            if(array[i] == target) count++;
+        }
+        System.out.println("[" + target +"]" + ": " + count);
     }
 }
