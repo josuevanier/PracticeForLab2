@@ -37,7 +37,7 @@ public class Exercise1_with_N_Integer {
 
        int[] array = {1,1,1,2,3,4};
 
-       elementOccurence(array,1);
+       elementOccurence(array,1,2,4);
     }
 
     public static int sumOfArray(int[] array){
@@ -57,17 +57,32 @@ public class Exercise1_with_N_Integer {
     }
 
     public static double arrayAvg(int [] array){
-        double avg = 0.0;
+        double avg;
         avg = (double) sumOfArray(array) / array.length;
         return avg;
     }
 
-    public static void elementOccurence(int[] array, int target){
+    public static void elementOccurence(int[] array, int target, int target2, int target3){
         int count = 0;
 
+
         for(int i = 0; i < array.length; i++){
-            if(array[i] == target) count++;
+                if (array[i] == target) count++;
         }
-        System.out.println("[" + target +"]" + ": " + count);
+        System.out.println("[" + target +"]" + ": " + count + "\n");
+
+        count = 0;
+
+        for (int j = 0; j < array.length; j++){
+            if(array[j] == target2) count++;
+        }
+        System.out.println("[" + target2 +"]" + ": " + count + "\n");
+
+        count = 0;
+
+        for(int v = 0; v < array.length; v++){
+            if(array[v] == target3) count++;
+        }
+        System.out.println("[" + target3 + "]" + ": " + count);
     }
 }
