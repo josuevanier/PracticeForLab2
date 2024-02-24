@@ -22,11 +22,16 @@ public class Exercise1_with_N_Integer {
         int[]  integers = new int[n];
 
         for(int i = 0; i < n; i++){
-            System.out.println("Enter your " + i + 1 + " num: ");
+            System.out.println("Enter your " + (i + 1) + " num: ");
             integers[i] = sc.nextInt();
         }
 
         System.out.println(Arrays.toString(integers));
+
+
+        System.out.println(sumOfArray(integers));
+
+        System.out.println(produtOfArray(integers));
     }
 
     public static int sumOfArray(int[] array){
