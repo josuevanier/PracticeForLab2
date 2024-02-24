@@ -32,6 +32,8 @@ public class Exercise1_with_N_Integer {
         System.out.println(sumOfArray(integers));
 
         System.out.println(produtOfArray(integers));
+
+        System.out.println(arrayAvg(integers));
     }
 
     public static int sumOfArray(int[] array){
@@ -48,5 +50,11 @@ public class Exercise1_with_N_Integer {
             product *= array[i];
         }
         return product;
+    }
+
+    public static double arrayAvg(int [] array){
+        double avg = 0.0;
+        avg = (double) sumOfArray(array) / array.length;
+        return avg;
     }
 }
