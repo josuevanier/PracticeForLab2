@@ -14,6 +14,8 @@ public class Array2d {
         //maxOfAnArray(myArray);
 
         columnsSums(myArray);
+
+        xPattern(myArray);
     }
 
     public static void sumOfRow(int[][] array){
@@ -49,6 +51,15 @@ public class Array2d {
             }
             System.out.println("Sum of " + i+ " : " + sum);
             sum = 0;
+        }
+    }
+    public static  void xPattern(int[][] array){
+
+        for(int i = 0; i < array.length; i++) {
+            for(int j = 0; j < i; j++ ) {
+                System.out.print(" ");
+            }
+            System.out.println(array[i][i]);
         }
     }
 }
