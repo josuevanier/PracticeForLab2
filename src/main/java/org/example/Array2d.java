@@ -3,14 +3,17 @@ package org.example;
 public class Array2d {
     public static void main(String[] args) {
 
-        int[][] myArray = {{1,2,3,4},
-                {2,3,5,6,7,8},
-                {3,4,7,8,8}
+        int[][] myArray = {
+                {1,2,3,4},
+                {2,3,5,6},
+                {3,4,7,8}
         };
 
-        sumOfRow(myArray);
+        //sumOfRow(myArray);
 
-        maxOfAnArray(myArray);
+        //maxOfAnArray(myArray);
+
+        columnsSums(myArray);
     }
 
     public static void sumOfRow(int[][] array){
@@ -24,6 +27,7 @@ public class Array2d {
             System.out.println("Sum of row " + i + " : " + sum);
             sum = 0;
         }
+
     }
     public static void maxOfAnArray(int[][] array){
         int max = Integer.MIN_VALUE;
@@ -34,6 +38,17 @@ public class Array2d {
             }
             System.out.println("Max of " + i + " : " + max);
             max = Integer.MIN_VALUE;
+        }
+    }
+    public static void columnsSums(int[][] array){
+        int sum = 0;
+
+        for(int i = 0; i < array[0].length; i++){
+            for(int j = 0; j < array.length; j++){
+                sum += array[j][i];
+            }
+            System.out.println("Sum of " + i+ " : " + sum);
+            sum = 0;
         }
     }
 }
