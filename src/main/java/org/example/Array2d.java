@@ -3,6 +3,7 @@ package org.example;
 public class Array2d {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         int[][] myArray = {{1,2},
                 {2,3},
                 {3,4}
@@ -22,5 +23,7 @@ public class Array2d {
             System.out.println("Sum of row " + i + " : " + sum);
             sum = 0;
         }
+=======
+>>>>>>> origin/main
     }
 }
