@@ -8,9 +8,9 @@ public class Comparator {
     public static void main(String[] args) {
         ArrayList<Author> authors = new ArrayList<Author>();
 
-        authors.add(new Author("Josue", "FOrestal","LOla",0));
+        authors.add(new Author("Josue", "FOrestal","LOla",4));
         authors.add(new Author("Josue", "BOrestal","LOla",2));
-        authors.add(new Author("Josue", "DOrestal","LOla",1));
+        authors.add(new Author("Josue", "DOrestal","LOla",3));
 
         Collections.sort(authors);
 
@@ -36,9 +36,9 @@ class Author implements  Comparable<Author>{
     // if you want to compare based  sort based on different data field you will have to change the code
     @Override
     public int compareTo(Author o) {
-      // Smaller value to bigger value
+      // Bigger value to smaller value
         if(this.numberOfSells == o.numberOfSells) return 0;
-        else if (this.numberOfSells > o.numberOfSells) return 1;
-        else return -1;
+        else if (this.numberOfSells > o.numberOfSells) return -1;
+        else return 1;
     }
 }
