@@ -8,9 +8,9 @@ public class Comparator {
     public static void main(String[] args) {
         ArrayList<Author> authors = new ArrayList<Author>();
 
-        authors.add(new Author("Josue", "FOrestal","LOla"));
-        authors.add(new Author("Josue", "BOrestal","LOla"));
-        authors.add(new Author("Josue", "DOrestal","LOla"));
+        authors.add(new Author("Josue", "FOrestal","LOla",0));
+        authors.add(new Author("Josue", "BOrestal","LOla",2));
+        authors.add(new Author("Josue", "DOrestal","LOla",1));
 
         Collections.sort(authors);
 
@@ -24,16 +24,21 @@ class Author implements  Comparable<Author>{
     String firstName;
     String lastName;
     String bookName;
+    int numberOfSells = 0;
 
-    public Author(String firstName, String lastName, String bookName) {
+    public Author(String firstName, String lastName, String bookName, int numberOfSells) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.bookName = bookName;
+        this.numberOfSells = numberOfSells;
     }
     // Problem with comparator one of the major problem with comperator  its the comperator interface only have one method
     // if you want to compare based  sort based on different data field you will have to change the code
     @Override
     public int compareTo(Author o) {
-        return this.lastName.compareTo(o.lastName); // comparing the current object with the object o;
+      // Smaller value to bigger value
+        if(this.numberOfSells == o.numberOfSells) return 0;
+        else if (this.numberOfSells > o.numberOfSells) return 1;
+        else return -1;
     }
 }
