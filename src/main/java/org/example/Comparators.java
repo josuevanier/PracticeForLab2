@@ -63,3 +63,10 @@ class AuthorYearOfPublicationComparator implements Comparator<Author>{
         else return -1;
     }
 }
+class AuthorBookName implements Comparator<Author>{
+
+    @Override
+    public int compare(Author o1, Author o2) {
+        return o1.bookName.compareTo(o2.bookName);
+    }
+}
